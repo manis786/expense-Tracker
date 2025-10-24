@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "Personal-Font";
+    src: url("./Assets/Outfit/Outfit-VariableFont_wght.ttf");
+}
+
+
+body {
+    background: #5d57c7;
+    background: linear-gradient(100deg,
+            rgba(93, 87, 199, 1) 13%,
+            rgba(152, 85, 212, 1) 70%,
+            rgba(203, 84, 224, 1) 87%);
+
+}
+
+.RegisterDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    min-height: 350px;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+}
+
+.MainDiv h1 {
+    color: #5d57c7;
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Personal-Font", sans-serif;
+}
+
+.RegistrationForm {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#newUsername,
+#Newemail,
+#newPassword,
+#repeatPassword {
+    width: 75%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+#signupButton {
+    width: 75%;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #5d57c7, #9855d4);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+#signupButton:hover {
+    background: linear-gradient(90deg, #504ca0, #804aad);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+#lsignupButton:active {
+    transform: translateY(1px);
+}

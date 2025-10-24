@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="app-title">Expense Tracker</h1>
+            
+            <h3 class="balance-title">Your Balance</h3>
+            <p id="balance" class="balance-amount">$350.00</p>
+            
+            <div class="inc-exp-container">
+                <div class="inc-card">
+                    <h4>Income</h4>
+                    <p id="income">$1000.00</p>
+                </div>
+                <div class="exp-card">
+                    <h4>Expenses</h4>
+                    <p id="expenses">$650.00</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <h3 class="section-title">Add Transaction</h3>
+            <form id="form">
+                <div class="form-control">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" placeholder="Enter description" />
+                </div>
+                <div class="form-control">
+                    <label for="amount">Amount <small>(negative - expense, positive - income)</small></label>
+                    <input type="number" id="amount" placeholder="Enter amount" />
+                </div>
+                <button type="submit" id="add-transaction-btn" class="btn">Add Transaction</button>
+            </form>
+
+            <hr>
+
+            <h3 class="section-title">Transaction History</h3>
+            <div class="transaction-table-container">
+                <table id="history-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transaction-list">
+                        <tr class="income">
+                            <td>2025-01-17</td>
+                            <td>Salary</td>
+                            <td>$1000.00</td>
+                            <td><button class="delete-btn">X</button></td>
+                        </tr>
+                        <tr class="expense">
+                            <td>2025-01-17</td>
+                            <td>Grocery</td>
+                            <td>$ -150.00</td>
+                            <td><button class="delete-btn">X</button></td>
+                        </tr>
+                        <tr class="expense">
+                            <td>2025-01-17</td>
+                            <td>Rent</td>
+                            <td>$ -500.00</td>
+                            <td><button class="delete-btn">X</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

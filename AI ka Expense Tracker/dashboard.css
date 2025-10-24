@@ -1,0 +1,186 @@
+/* Base Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f7f7f7; /* Light background */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 100%;
+}
+
+/* Header and Balance */
+.app-title {
+    text-align: center;
+    color: #5d57c7; /* Matching the purple theme */
+    margin-bottom: 5px;
+}
+
+.balance-title {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-top: 20px;
+}
+
+.balance-amount {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #5d57c7;
+    font-weight: bold;
+}
+
+/* Income/Expense Summary Cards */
+.inc-exp-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.inc-card, .exp-card {
+    flex: 1;
+    padding: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.inc-card {
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+}
+
+.exp-card {
+    background-color: #fce4e4; /* Light pink background for expenses */
+}
+
+.inc-card h4, .exp-card h4 {
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #555;
+}
+
+.inc-card p {
+    color: #5d57c7; /* Income purple */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.exp-card p {
+    color: #c0392b; /* Expense red */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Add Transaction Form */
+.section-title {
+    margin: 20px 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.form-control {
+    margin: 10px 0;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-control input[type="text"],
+.form-control input[type="number"] {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    width: 100%;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: #9855d4; /* Purple button */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    border: 0;
+    display: block;
+    font-size: 16px;
+    margin: 10px 0 30px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #5d57c7;
+}
+
+/* Transaction History Table */
+.transaction-table-container {
+    margin-top: 15px;
+}
+
+#history-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+}
+
+#history-table th, #history-table td {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#history-table thead th {
+    font-weight: bold;
+    color: #666;
+    text-transform: uppercase;
+}
+
+/* Transaction Row Styling */
+.transaction-list .income {
+    border-left: 5px solid #5d57c7; /* Income purple bar */
+}
+
+.transaction-list .expense {
+    border-left: 5px solid #c0392b; /* Expense red bar */
+}
+
+.delete-btn {
+    cursor: pointer;
+    background-color: #e74c3c;
+    color: #fff;
+    border: 0;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px 8px;
+    border-radius: 4px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
