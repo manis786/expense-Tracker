@@ -29,21 +29,24 @@
                     <!-- <p id="ExpenseCounter">0</p> -->
                     <p>$ <span id="ExpenseCounter">0</span></p>
                 </div>
+                
             </div>
-            <div class="transactionsDiv">
+            <button onclick="AddTrans()" id="addBtn1">Add Transaction</button>
+            <div class="transactionsDiv" id="transDiv">
                 <h2>Add Transactions</h2>
                 <p>Description</p>
                 <input type="text" id="description" placeholder="Enter description..." />
-            </div>
-            <div class="amountDiv">
                 <br>
                 <p>Amount (negative - expense, positive - income)</p>
                 <input type="number" id="amount" placeholder="Enter amount..." />
+            </div>
+            <div class="amountDiv">
             </div>
             <button onclick="initAmounts()" id="addBtn">Add Transaction</button>
             <div class="HistoryDiv">
                 <h2>History</h2>
                 <hr>
+<<<<<<< HEAD
                 <ul id="transactionList">
                     <li>ID</li>
                     <li>Description</li>
@@ -55,6 +58,9 @@
                 </ul>
                 <!-- <hr>
                 <table>
+=======
+                <table class="table table-warning text-center">
+>>>>>>> c75fae9 (New Updated Code)
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -63,6 +69,7 @@
                             <th>Action</th>
                         </tr>
                     </thead>
+<<<<<<< HEAD
                     <tbody id = "Transaction-List">
                         <tr class="income">
                             <td>2025-01-17</td>
@@ -70,13 +77,22 @@
                             <td>$1000.00</td>
                             <td><button class="delete-btn">X</button></td>
                         </tr>
+=======
+                    <tbody id="transactionList">
+                  <tr class = "initialRow">
+                    <td>#</td>
+                    <td>#</td>
+                    <td>#</td>
+                  </tr>
+>>>>>>> c75fae9 (New Updated Code)
 
                     </tbody>
                 </table> -->
             </div>
         </div>
         <script src="app.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" ></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"></script>
 </body>
 

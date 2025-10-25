@@ -5,12 +5,12 @@
 
 
 body {
-    background: #5d57c7;
-    background: linear-gradient(20deg,
+    background: #5d57c7 !important;
+    background: linear-gradient(20deg
             rgba(93, 87, 199, 1) 13%,
             rgba(152, 85, 212, 1) 70%,
-            rgba(203, 84, 224, 1) 87%);
-          
+            rgba(203, 84, 224, 1) 87%)!important;
+
 }
 
 .MainContentCard {
@@ -121,28 +121,26 @@ hr {
     font-weight: bold;
     font-family: "Personal-Font", sans-serif;
 }
+
 #TransData li {
     list-style-type: none;
-display: flex;
+    display: flex;
 
 
-word-spacing: 100px;
+    word-spacing: 100px;
 
-font-size: 16px;
+    font-size: 16px;
 
 }
-jus
-
-
-
 #description {
     position: absolute;
-    top: 340px;
+    top: 315px;
     font-family: "Personal-Font", sans-serif;
     font-size: 16px;
     border-radius: 5px;
     padding-left: 5px;
 }
+
 #amount {
     margin-top: -50px;
     font-family: "Personal-Font", sans-serif;
@@ -151,9 +149,9 @@ jus
     padding-left: 5px;
 }
 
-#addBtn {
-margin-bottom: 20px;
-margin-top: 20px;
+#addBtn , #addBtn1 {
+    margin-bottom: 20px;
+    margin-top: 20px;
     width: 150px;
     height: 40px;
     background: linear-gradient(90deg, #5d57c7, #9855d4);
@@ -166,7 +164,8 @@ margin-top: 20px;
     transition: background-color 0.3s ease, transform 0.1s ease;
     font-family: "Personal-Font", sans-serif;
 }
-.delbtn{
+
+.delbtn {
     background: linear-gradient(90deg, #5d57c7, #9855d4);
     border: none;
     border-radius: 8px;
@@ -175,4 +174,10 @@ margin-top: 20px;
     cursor: pointer;
     justify-content: center;
     align-items: center;
+}
+.transactionsDiv , #addBtn{
+    display: none;
+}
+.initialRow{
+    display: none;
 }
