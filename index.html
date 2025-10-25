@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker | Your Ultimate Expense Tracker</title>
     <link rel="stylesheet" href="indexstyles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -43,9 +44,40 @@
             <div class="HistoryDiv">
                 <h2>History</h2>
                 <hr>
+                <ul id="transactionList">
+                    <li>ID</li>
+                    <li>Description</li>
+                    <li>Amount</li>
+                    <li>Action</li>
+                </ul>
+                <ul id = "TransData">
+                    <!-- Transaction Data Appears Here -->
+                </ul>
+                <!-- <hr>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "Transaction-List">
+                        <tr class="income">
+                            <td>2025-01-17</td>
+                            <td>Salary</td>
+                            <td>$1000.00</td>
+                            <td><button class="delete-btn">X</button></td>
+                        </tr>
+
+                    </tbody>
+                </table> -->
             </div>
         </div>
         <script src="app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"></script>
 </body>
 
 </html>
