@@ -27,7 +27,7 @@ function login() {
         email: user.email
       }
       sessionStorage.setItem("currentUser", JSON.stringify(currentUser));
-      location.href = "./index.html"
+     
     }
   }
   if (!userFound) {
