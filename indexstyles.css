@@ -6,10 +6,9 @@
 
 body {
     background: #5d57c7 !important;
-    background: linear-gradient(20deg
-            rgba(93, 87, 199, 1) 13%,
+    background: linear-gradient(20deg rgba(93, 87, 199, 1) 13%,
             rgba(152, 85, 212, 1) 70%,
-            rgba(203, 84, 224, 1) 87%)!important;
+            rgba(203, 84, 224, 1) 87%) !important;
 
 }
 
@@ -98,14 +97,9 @@ body {
 
 .transactionsDiv h2 {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-family: "Personal-Font", sans-serif;
-}
-
-.transactionsDiv p {
-    font-size: 14px;
-    font-family: "Personal-Font", sans-serif;
-    margin-top: -5px;
+    padding-top: 20px;
 }
 
 hr {
@@ -132,9 +126,10 @@ hr {
     font-size: 16px;
 
 }
+
 #description {
     position: absolute;
-    top: 315px;
+    top: 325px;
     font-family: "Personal-Font", sans-serif;
     font-size: 16px;
     border-radius: 5px;
@@ -142,14 +137,17 @@ hr {
 }
 
 #amount {
-    margin-top: -50px;
     font-family: "Personal-Font", sans-serif;
     font-size: 16px;
     border-radius: 5px;
     padding-left: 5px;
+    /* position: absolute;
+    top: 475px; */
+    margin-bottom: 30px;
 }
 
-#addBtn , #addBtn1 {
+#Bttn1,
+#Bttn2 {
     margin-bottom: 20px;
     margin-top: 20px;
     width: 150px;
@@ -178,6 +176,19 @@ hr {
 .transactionsDiv , #addBtn{
     display: none;
 }
-.initialRow{
+.initialRow {
     display: none;
+}
+
+/* #Bttn2 {
+    display: none!important
+} */
+ .Para2{
+margin: -20px 0 30px 0;
+}
+.HistoryDiv  h2{
+
+    margin-top: 20px;
+    font-family: "Personal-Font", sans-serif;
+    font-size: 22px;
 }

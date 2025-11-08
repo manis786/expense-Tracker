@@ -1,93 +1,39 @@
-// var descInput = document.getElementById("description").value || 0;
-// var amountInput = document.getElementById("amount").value || 0;
-var TransactionHistory = JSON.parse(localStorage.getItem("History")) || [];
-var users = JSON.parse(localStorage.getItem("userData")) || [];
-console.log(TransactionHistory);
-function initAmounts() {
-    var descInput = document.getElementById("description").value;
-    var amountInput = document.getElementById("amount").value;
-    if (!descInput || !amountInput) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Please fill in all fields!',
-        });
-        return;
-    }
-    console.log("Description: ", descInput), console.log("Amount: ", amountInput);
-    saveTrans()
+var currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
+if(!currentUser){
+    location.href = "./login.html";
 }
-function AddTrans() {
-    var TransDiv = document.getElementById("transDiv");
-    var transBtn = document.getElementById("addBtn1");
-    var saveBtn = document.getElementById("addBtn");
-    TransDiv.style.display = "block";
-    saveBtn.style.display = "block";
-    transBtn.style.display = "none";
-}
-function saveTrans() {
-    descInput = document.getElementById("description").value;
-    amountInput = document.getElementById("amount").value;
-   
-    // console.log(TransactionHistory)
-    var newTransaction = {
-        description: descInput,
-        amount: parseFloat(amountInput)
-    };
-    TransactionHistory.push(newTransaction);
-    localStorage.setItem("History", JSON.stringify(TransactionHistory));
+var btn1 = document.getElementById('Bttn1');
+var btn2 = document.getElementById('Bttn2');
 
-var datatab = document.getElementById("transactionList");
-var tabdata = document.createElement("tr");
-tabdata.innerHTML = "<td>".concat(newTransaction.description, "</td><td>").concat(newTransaction.amount, "</td><td><button>X</button></td>");
-datatab.appendChild(tabdata);
-}
-function signupUser () {
-    var users = JSON.parse(localStorage.getItem("userData")) || [];
-    var username = document.getElementById("newUsername").value;
-    var email = document.getElementById("Newemail").value;
-    var password = document.getElementById("newPassword").value;
-    var rpassword = document.getElementById("repeatPassword").value;
-
-    if (!username || !email || !password ) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Please fill in all fields!',
-        });
-        return;
-    }
-    if (password !== rpassword) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Passwords do not match!',
-        });
-        return;
-    }
-    var id;
-    if (users.length == 0) {
-      id = 1
-    } else {
-      id = users[users.length - 1].id + 1
-    }
-    var newUser = {
-        id : id,
-        username: username,
-        email: email,
-        password: password
-    };
-
-    TransactionHistory.push(newUser);
-    localStorage.setItem("userData", JSON.stringify(TransactionHistory));
+btn1.addEventListener('click', function () {
+    var Transdiv = document.getElementById('transDiv');
+    Transdiv.style.display = 'block';
+    btn1.style.display = 'none';
+    btn2.style.display = 'block';
+});
+btn2.addEventListener('click', function () {
+var description = document.getElementById('description').value;
+var amount = document.getElementById('amount').value;
+if(description === "" || amount === ""){
     Swal.fire({
-        title: 'Success!',
-        text: 'Your account has been created.',
-        icon: 'success',
-        confirmButtonText: 'Continue'
-      }).then((result) => {
-        if (result.isConfirmed) {
-          window.location.href = 'login.html'; 
-        }
+        icon: "error",
+        title: "Oops...",
+        text: "Please fill all the fields!",
       });
+      return;
+}});
+
+var userTransactions = JSON.parse(localStorage.getItem("userTransactions")) || [];
+var userHistory = {
+    id: currentUser.id,
+    userTransactions: []
 }
+var transaction = {
+    description: description,
+    amount: parseFloat(amount),
+    date: new Date().toLocaleString()
+};
+userHistory.userTransactions.push(transaction);
+userTransactions.push(userHistory);
+console.log(userTransactions);
+// localStorage.setItem("userTransactions", JSON.stringify(userTransactions));
